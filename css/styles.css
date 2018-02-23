@@ -1,0 +1,12 @@
+body{
+  border-top: 50px;
+  border-bottom: 50px;
+  border-left: 20%;
+  border-right: 20%;
+  border-color: solid black;
+}
+.container-fluid{
+  background-color: #ffe6b3;
+  width: 1300px;
+  height: 200px;
+}
