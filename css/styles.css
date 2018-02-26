@@ -10,3 +10,14 @@ body{
   width: 1300px;
   height: 200px;
 }
+.column1{
+  float:right;
+}
+.column2{
+  float:left;
+  background-color: #39ac71;
+  width: 400px;
+  height: 500px;
+  padding-left: 50px;
+  margin-left: 20px;
+}
