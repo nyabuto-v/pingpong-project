@@ -1,33 +1,50 @@
-//business logic
-var pingPong = function(number){
-  for(number=1; number<100; number++){
-    if(number % 3 === 0){
-      console.log("ping");
-    };
-    else if(number % 5 === 0){
-      console.log("pong");
-    };
-    else if(number % 3 === 0 && number % 5 === 0){
-      console.log("pingpong");
-    else{
-      console.log(number);
-      }
-    };
-  };
+$(document).ready(function() {
 
-//user interface logic
-$(document).ready(function(){
-  $("#formping-pong").submit(function(event){
-    event.preventDefualt();
-    var number = parseInt("$input#number").val());
-    var result = pingPong(number);
-    $("#result").text(result);
+//interface logic
+     //search for the event
+     $("#button").click(function(e){
+       //fetch input from the input field
+       var input = parseInt($("#number").val());
 
-    if(!result){
-      $(".not").text("not");
-    }else{
-      $("not").text("");
-    }
-    $(#result).show();
-  })
-})
+       //outputing the answer
+       function finalOutput(){
+         for(var i = 0;i<=(output.length-1);i++){
+       $("ol").append("<li>"+ output[i] +"</li>");
+     }
+   }
+
+
+// business logic
+     //array to store the numbers
+     var numbers=[];
+    //getting the numbers in the range of 1- user's input
+   function rangeFinder() {
+        for(var i =0;i<=input;i++){
+         numbers.push(i);
+        }
+   };
+   rangeFinder();
+   console.log(numbers);
+   //test divisibility for 3,5,15
+   var output=[];
+   function divisibility1(){
+     for(var i=0;i<=numbers.length;i++){
+       if(i%15===0){
+         output.push("pingpong");
+       }
+       else if(i%5===0){
+         output.push("pong");
+       }
+       else if(i%3===0){
+         output.push("ping");
+       }else{output.push(i);}   }
+
+   }
+
+   divisibility1();
+   console.log(output);
+
+   finalOutput();
+   e.preventDefault();
+ });
+});
